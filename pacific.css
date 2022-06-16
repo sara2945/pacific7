@@ -76,31 +76,56 @@ background-image: url(trail.jpg);
 background-repeat: no-repeat;
 background-size: 200% 100%;
 }
-height: 300px;
-background-image: url(yurt.jpg);
-background-repeat: no-repeat;
-background-size: 100% 100%; 
-margin-left: 170px; 
+#mobile { display: inline; }
+#desktop { display: none; }
+section {
+padding-left: .5em;
+padding-right: .5em;
 }
-#trailhero { 
-height: 300px;
-background-image: url(trail.jpg);
-background-repeat: no-repeat;
-background-size: 100% 100%; 
-margin-left: 170px; 
-}	
-section { 
-float: left;
-padding-left: 2em;
-padding-right: 2em;
-width: 33%; 
-}			
-footer { 
+footer {
 background-color: #FFF;
 font-size: .70em;
 font-style: italic;
-margin-left: 170px;
 padding: 1em;
 text-align: center;
 }
-
+@media (min-width: 600px) {
+h1 {
+font-size: 2em;
+letter spacing: .25em;
+}
+nac ul {
+flex-flow: row nowrap;
+justify-context: space-around;
+padding-right: 2em;
+}
+nav li {
+border-bottem: none;
+width: 12 em;
+}
+section {
+padding-left: 2em;
+padding-right: 2em;
+}
+#flow {
+display: flex;
+flex-direction: row;
+}
+#mobile { display: none; }
+#desktop { display: inline; }
+#homehero, #yurthero, #trailhero { background-size: 100% 100% }
+}
+@media (min-width: 1024px) {
+body {
+background-image:
+linear-gradient(to bottom, #FFFFFF 20%, #90C7E3 60%, #FFFFFF 100%);
+}
+nav ul {
+padding-left: 10%;
+padding-right: 10%;
+}
+#wrapper {
+margin: auto;
+width: 80%
+}
+}
